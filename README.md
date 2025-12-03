@@ -1,5 +1,7 @@
 # screensaver-pm
 
+I screensaver-pm be my pm, by using my screensaver to be reminded of what I should be doing.
+
 Display your PROJECTS.md as a macOS screensaver using WebViewScreenSaver.
 
 ## Setup
