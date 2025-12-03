@@ -1,0 +1,9 @@
+# Actual projects file - keep local, don't commit
+PROJECTS.md
+PROJECTS.html
+
+# macOS
+.DS_Store
+
+# Generated files
+*.log
