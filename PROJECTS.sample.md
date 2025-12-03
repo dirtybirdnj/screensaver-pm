@@ -2,52 +2,35 @@
 
 Last updated: 2025-12-03
 
-## Actively Destroying
+## Ship Now
 
 Projects currently receiving maximum kaiju attention.
 
-| Project | Type | Description | Next Action |
-|---------|------|-------------|-------------|
-| [Tokyo Rampage](https://github.com/godzilla/tokyo-rampage) | Destruction | Systematic demolition of Shinjuku, Shibuya, and Ginza districts | Finish trampling the Diet Building |
-| [Janjira Investigation](https://github.com/godzilla/janjira-incident) | Nuclear | Address MUTO situation at compromised power plant | Defeat MUTOs, absorb delicious radiation |
+- **Tokyo Rampage** | Destruction | Systematic demolition of Shinjuku, Shibuya, and Ginza districts | Finish trampling the Diet Building | https://github.com/godzilla/tokyo-rampage
+- **Janjira Investigation** | Nuclear | Address MUTO situation at compromised power plant | Defeat MUTOs, absorb delicious radiation | https://github.com/godzilla/janjira-incident
+
+## Active Development
+
+Projects under active work.
+
+- **Osaka Express** | Destruction | Western Japan tour including Osaka Castle | Tokyo taking longer than expected | https://github.com/godzilla/osaka-express
 
 ## On Hold
 
-Paused projects - will return to these after current crisis.
+Paused projects - will return to these.
 
-| Project | Type | Description | Notes |
-|---------|------|-------------|-------|
-| [Osaka Express](https://github.com/godzilla/osaka-express) | Destruction | Western Japan tour | Tokyo taking longer than expected |
-| [Monster Island Renovations](https://github.com/godzilla/monster-island-reno) | Infrastructure | Update cave, add hot spring | Mothra keeps asking about timeline |
+- **Monster Island Renovations** | Infrastructure | Update cave, add hot spring | Mothra keeps asking about timeline | https://github.com/godzilla/monster-island-reno
+- **Pacific Rim Patrol** | Defense | Regular ocean territory sweeps | Delegated to Rodan temporarily | https://github.com/godzilla/pacific-patrol
 
-## Upcoming
+## Future
 
-Projects planned but not started.
+Projects planned but not started or blocked by other work.
 
-| Project | Type | Description | Blocked By |
-|---------|------|-------------|------------|
-| [Hawaii Vacation](https://github.com/godzilla/hawaii-vacation) | R&R | Beach time, volcanic spa, terrorize surfers (gently) | Must finish Janjira first |
-| [Rematch: Kong](https://github.com/godzilla/kong-rematch) | Rivalry | Settle the score, Hollow Earth rules | Kong won't return calls |
-
----
-
-## Destruction Checklist Template
-
-_Standard operating procedure for urban renewal_
-
-- [ ] Emerge dramatically from ocean
-- [ ] Roar to establish presence
-- [ ] Locate tallest building
-- [ ] Atomic breath test fire
-- [ ] Systematic grid-pattern destruction
-- [ ] Pose heroically in flames
-- [ ] Return to sea
-
----
+- **Hawaii Vacation** | R&R | Beach time, volcanic spa, terrorize surfers gently | Must finish Janjira first | https://github.com/godzilla/hawaii-vacation
+- **Rematch Kong** | Rivalry | Settle the score with Hollow Earth rules | Kong won't return calls | https://github.com/godzilla/kong-rematch
 
 ## Notes
 
-- **Philosophy**: "If it's standing, it shouldn't be"
-- **Goal**: Maintain alpha predator status, restore natural balance
-- **Pattern**: Destroy first, let humans figure out the "why" later
-- **Snack preference**: Nuclear reactors > submarines > aircraft carriers
+- Philosophy: If it's standing, it shouldn't be
+- Goal: Maintain alpha predator status, restore natural balance
+- Snack preference: Nuclear reactors then submarines then aircraft carriers

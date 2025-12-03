@@ -9,59 +9,69 @@ Display your PROJECTS.md as a macOS screensaver using WebViewScreenSaver.
 ### 1. Install dependencies
 
 ```bash
-brew install pandoc
 brew install --cask webviewscreensaver
 ```
 
 ### 2. Link your PROJECTS.md
 
 ```bash
-# Option A: Symlink (recommended - auto-updates)
-ln -s /Users/mgilbert/Code/PROJECTS.md /Users/mgilbert/Code/screensaver-pm/PROJECTS.md
-
-# Option B: Copy manually when needed
-cp /path/to/your/PROJECTS.md /Users/mgilbert/Code/screensaver-pm/PROJECTS.md
+# Symlink (recommended - auto-updates)
+ln -s /path/to/your/PROJECTS.md /path/to/screensaver-pm/PROJECTS.md
 ```
 
 ### 3. Convert to HTML
 
 ```bash
-cd /Users/mgilbert/Code/screensaver-pm
-chmod +x convert.sh
-./convert.sh
+cd /path/to/screensaver-pm
+python3 convert.py
 ```
 
 ### 4. Configure screensaver
 
-1. Open **System Preferences → Desktop & Screen Saver → Screen Saver**
+1. Open **System Settings → Screen Saver**
 2. Select **WebViewScreenSaver**
-3. Click **Screen Saver Options...**
-4. Enter URL: `file:///Users/mgilbert/Code/screensaver-pm/PROJECTS.html`
+3. Click **Options...**
+4. Enter URL:
+   ```
+   file:///path/to/screensaver-pm/PROJECTS.html
+   ```
 
-### 5. Auto-convert on file change (optional)
+#### URL Parameters
 
-Using `fswatch` to auto-regenerate HTML when PROJECTS.md changes:
+| Param | Default | Description |
+|-------|---------|-------------|
+| `auto` | `true` | Auto-advance slides (`false` to disable) |
+| `interval` | `8000` | Slide duration in ms (e.g., `10000` for 10s) |
 
-```bash
-brew install fswatch
+**Examples:**
+- Auto slideshow: `PROJECTS.html`
+- Manual navigation: `PROJECTS.html?auto=false`
+- Slower slides: `PROJECTS.html?interval=12000`
 
-# Run in background
-fswatch -o /Users/mgilbert/Code/PROJECTS.md | xargs -n1 /Users/mgilbert/Code/screensaver-pm/convert.sh &
+## PROJECTS.md Format
+
+Use pipe-delimited format for each project:
+
+```markdown
+## Ship Now
+
+Projects ready for release.
+
+- **project-name** | Type | Description text | Next action | https://github.com/user/repo
 ```
 
-Or add to your shell startup for always-on monitoring.
+Sections: `Ship Now`, `Active Development`, `On Hold`, `Future`
 
 ## Files
 
 - `PROJECTS.md` - Your actual project dashboard (gitignored, local only)
 - `PROJECTS.sample.md` - Example file (Godzilla's busy schedule)
-- `PROJECTS.html` - Generated output for screensaver (gitignored)
-- `convert.sh` - Markdown → HTML converter
-- `template.html` - Dark theme template with auto-refresh
+- `PROJECTS.html` - Generated slideshow (gitignored)
+- `convert.py` - Python script to generate HTML
 
 ## Features
 
-- GitHub dark theme styling
-- Auto-refreshes every 60 seconds
-- Large, readable fonts for screensaver viewing
-- Subtle fade-in animation
+- **Reveal.js slideshow**: Smooth transitions, auto-advance, keyboard navigation
+- **4 color-coded slides**: Ship Now (green), Active (blue), On Hold (yellow), Future (purple)
+- **Auto-refreshes** every 60 seconds
+- **Keyboard navigation**: Arrow keys, space bar
