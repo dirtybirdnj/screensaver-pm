@@ -96,67 +96,96 @@ def generate_html(sections):
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
     <style>
+        /* ==========================================
+           FONT SIZE REFERENCE - adjust these values
+           Base: 20px, everything scales from here
+           ========================================== */
         .reveal {{
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            font-size: 16px;
+            font-size: 20px;  /* BASE FONT SIZE */
         }}
+
+        /* Slide title */
         .reveal h2 {{
-            font-size: 1.5em;
+            font-size: 1.8em;  /* ~36px */
             margin-bottom: 0.2em;
             text-transform: none;
         }}
+
+        /* Subtitle under title */
         .reveal .subtitle {{
-            font-size: 0.7em;
+            font-size: 0.85em;  /* ~17px */
             opacity: 0.7;
             margin-bottom: 0.8em;
         }}
+
+        /* Project cards container */
         .reveal .projects {{
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             max-width: 900px;
             margin: 0 auto;
         }}
+
+        /* Individual project card */
         .reveal .project-card {{
             background: rgba(0, 0, 0, 0.3);
             border-radius: 6px;
-            padding: 10px 15px;
+            padding: 12px 18px;
             text-align: left;
         }}
+
+        /* Project name */
         .reveal .project-card h3 {{
-            margin: 0 0 4px 0;
-            font-size: 0.85em;
+            margin: 0 0 6px 0;
+            font-size: 1.05em;  /* ~21px */
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }}
+
         .reveal .project-card h3 a {{
             color: #58a6ff;
             text-decoration: none;
         }}
+
+        /* Type badge (Electron, Game, etc) */
         .reveal .type-badge {{
-            font-size: 0.7em;
+            font-size: 0.7em;  /* ~14px */
             background: rgba(255, 255, 255, 0.15);
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 10px;
             font-weight: normal;
         }}
+
+        /* Project description */
         .reveal .project-card .description {{
-            margin: 0 0 4px 0;
-            font-size: 0.75em;
+            margin: 0 0 6px 0;
+            font-size: 0.9em;  /* ~18px */
             opacity: 0.9;
             line-height: 1.4;
         }}
+
+        /* Next action / status */
         .reveal .project-card .action {{
             margin: 0;
-            font-size: 0.65em;
+            font-size: 0.8em;  /* ~16px */
             opacity: 0.7;
         }}
+
         .reveal .project-card .action .label {{
             color: #3fb950;
         }}
+
+        /* Progress bar at bottom */
         .reveal .progress {{
             height: 3px;
+        }}
+
+        /* Fade transition timing - 3 seconds for smooth effect */
+        .reveal .slides section {{
+            transition: opacity 3s ease-in-out;
         }}
     </style>
 </head>
@@ -176,12 +205,15 @@ def generate_html(sections):
             hash: false,
             loop: true,
             autoSlide: auto ? interval : 0,
-            transition: 'slide',
+            transition: 'fade',
             transitionSpeed: 'slow',
             controls: true,
             progress: true,
             center: true
         }});
+
+        // Override transition duration (3 seconds)
+        document.documentElement.style.setProperty('--r-transition-duration', '3s');
 
         // Auto-refresh every 60 seconds
         setTimeout(function() {{ location.reload(); }}, 60000);
